@@ -1,0 +1,308 @@
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    margin: 0;   /* Remove a margem externa padrão do corpo da página */
+    padding: 0;  /* Remove o preenchimento interno padrão do corpo da página */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utilitários */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: #f4f4f4;
+}
+
+.bg-dark {
+    background-color: #333;
+    color: #fff;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #0A1926;
+}
+
+.logo-zap {
+  width: 10%;
+  padding-right: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700; /* Dourado */
+}
+
+/* Botões */
+.btn-primary, .btn-secondary {
+    display: flex;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #D9B343; /* Azul primário */
+    color: #000;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.btn-secondary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hero-section {
+    /*background: url('https://br.freepik.com/fotos-vetores-gratis/fundo') no-repeat center center/cover;
+     NOVO FUNDO: Degradê de preto/cinza como sobreposição */
+    /*background-color: transparent;  Garante que a cor sólida anterior não interfira */
+    /*background-image: linear-gradient(to bottom, rgba(34, 34, 34, 0.8), rgba(0, 0, 0, 0.8)), url('https://br.freepik.com/fotos-vetores-gratis/fundo');
+    /* Onde: rgba(34, 34, 34, 0.8) é um cinza escuro com 80% de opacidade
+             rgba(0, 0, 0, 0.8) é preto com 80% de opacidade */
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    padding: 50px 0;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.imagem-flutuante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: auto;
+  z-index: 1000;
+}
+
+/* Seção Sobre/Destaque */
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-placeholder {
+    flex: 1;
+    min-height: 300px;
+    background-color: #ccc; /* Placeholder visual */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Seção de Características/Benefícios */
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-card {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Seção de Empreendimentos/Galeria */
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.project-card h4 {
+    margin: 15px 0 10px;
+}
+
+/* Seção de Contato */
+.contact-section {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos menores/celulares */
+
+    /* Cabeçalho */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap; /* Permite que os links quebrem linha */
+        justify-content: center;
+    }
+    .nav-links li {
+        margin: 5px 10px; /* Mais espaço para toque */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 80px 0 50px;
+    }
+    .hero-content h2 {
+        font-size: 1.8em;
+    }
+
+    /* Seções com Flex (Sobre/Destaque) */
+    .flex-row {
+        flex-direction: column; /* Coloca os itens um abaixo do outro */
+        gap: 20px;
+    }
+    .image-placeholder {
+        min-height: 200px;
+        width: 100%;
+        order: -1; /* Coloca a imagem no topo no celular */
+    }
+
+    /* Seções de Grid (Características e Empreendimentos) */
+    .grid-3-cols,
+    .grid-2-cols {
+        grid-template-columns: 1fr; /* Coloca tudo em 1 coluna */
+        gap: 40px;
+    }
+
+    /* Formulário de Contato */
+    .contact-form {
+        gap: 10px;
+    }
+    .contact-form input, .contact-form textarea, .btn-primary {
+        width: 100%;
+    }
+
+    /* Padding Geral */
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    h2, h3 {
+        margin-bottom: 30px;
+    }
+}
